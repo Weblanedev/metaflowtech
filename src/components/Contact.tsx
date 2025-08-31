@@ -90,9 +90,9 @@ const Contact = () => {
         </svg>
       ),
       title: "Email Us",
-      description: "hello@metaflow.com",
+      description: "info@metaflowtech.com",
       action: "Send Email",
-      href: "mailto:hello@metaflow.com",
+      href: "mailto:info@metaflowtech.com",
     },
     {
       icon: (

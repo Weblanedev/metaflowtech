@@ -12,7 +12,7 @@ import {
 const About = () => {
   const stats = [
     { number: "10+", label: "Years of Experience", icon: Award },
-    { number: "$50B+", label: "Annual Transaction Volume", icon: TrendingUp },
+    { number: "$1k+", label: "Annual Transaction Volume", icon: TrendingUp },
     { number: "150+", label: "Countries Supported", icon: Globe },
     { number: "1000+", label: "Enterprise Clients", icon: Users },
   ];
@@ -210,47 +210,6 @@ const About = () => {
             ))}
           </div>
         </motion.div>
-
-        {/* Leadership Team */}
-        <motion.div
-          initial={{ y: 50, opacity: 0 }}
-          animate={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.8, delay: 1.2 }}
-        >
-          <h3 className="text-3xl font-bold text-white text-center mb-12">
-            Leadership Team
-          </h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            {team.map((member, index) => (
-              <motion.div
-                key={index}
-                initial={{ y: 30, opacity: 0 }}
-                animate={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8, delay: 1.4 + index * 0.2 }}
-                whileHover={{ y: -10 }}
-                className="text-center group"
-              >
-                <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-3xl p-8 hover:bg-white/20 transition-all duration-500">
-                  <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6 ring-4 ring-white/20 group-hover:ring-blue-400/40 transition-all duration-300">
-                    <img
-                      src={member.image}
-                      alt={member.name}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <h4 className="text-xl font-semibold text-white mb-2">
-                    {member.name}
-                  </h4>
-                  <div className="text-blue-400 font-medium mb-3">
-                    {member.role}
-                  </div>
-                  <p className="text-white/70 leading-relaxed">{member.bio}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
         {/* CTA Section */}
         <motion.div
           initial={{ y: 50, opacity: 0 }}

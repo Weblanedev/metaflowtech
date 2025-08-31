@@ -187,33 +187,6 @@ const About = () => {
           </div>
         </div>
 
-        {/* Leadership Team */}
-        <div>
-          <h3 className="text-3xl font-bold text-gray-900 text-center mb-12">
-            Leadership Team
-          </h3>
-          <div className="grid md:grid-cols-3 gap-8">
-            {team.map((member, index) => (
-              <div key={index} className="text-center">
-                <div className="w-32 h-32 rounded-full overflow-hidden mx-auto mb-6">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <h4 className="text-xl font-semibold text-gray-900 mb-2">
-                  {member.name}
-                </h4>
-                <div className="text-primary-600 font-medium mb-3">
-                  {member.role}
-                </div>
-                <p className="text-gray-600 leading-relaxed">{member.bio}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-
         {/* CTA Section */}
         <div className="mt-20 text-center">
           <div className="bg-gradient-to-r from-primary-50 to-accent-50 rounded-2xl p-8 md:p-12">
