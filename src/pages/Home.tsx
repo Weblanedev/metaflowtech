@@ -42,8 +42,6 @@ const Home = () => {
     },
   ];
 
-
-
   const integrations = [
     { name: "ERP Systems", description: "SAP, Oracle, NetSuite" },
     { name: "Accounting Software", description: "QuickBooks, Xero, Sage" },
