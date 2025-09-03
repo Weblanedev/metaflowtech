@@ -69,7 +69,7 @@ const Contact = () => {
         </svg>
       ),
       title: "Call Us",
-      description: "+1 (555) 123-4567",
+      description: "*******",
       action: "Call Now",
       href: "tel:+15551234567",
     },
@@ -90,9 +90,9 @@ const Contact = () => {
         </svg>
       ),
       title: "Email Us",
-      description: "info@metaflowtech.com",
+      description: "support@metaflow.com",
       action: "Send Email",
-      href: "mailto:info@metaflowtech.com",
+      href: "mailto:support@metaflow.com",
     },
     {
       icon: (
@@ -116,9 +116,9 @@ const Contact = () => {
           />
         </svg>
       ),
-      title: "Visit Us",
-      description: "123 Financial District, NY 10001",
-      action: "Get Directions",
+      title: "Address",
+      description: "*****",
+      // action: "Get Directions",
       href: "#",
     },
   ];
