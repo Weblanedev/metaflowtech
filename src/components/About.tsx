@@ -69,30 +69,6 @@ const About = () => {
     },
   ];
 
-  const team = [
-    {
-      name: "Sarah Johnson",
-      role: "Chief Executive Officer",
-      bio: "Former VP at Goldman Sachs with 15+ years in global financial markets.",
-      image:
-        "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80",
-    },
-    {
-      name: "Michael Chen",
-      role: "Chief Technology Officer",
-      bio: "Ex-Google engineer with expertise in scalable financial systems and blockchain technology.",
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80",
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "Chief Financial Officer",
-      bio: "Former CFO at JP Morgan Chase with deep expertise in treasury and risk management.",
-      image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80",
-    },
-  ];
-
   return (
     <section className="section-padding bg-white">
       <div className="container-custom">
@@ -103,10 +79,10 @@ const About = () => {
               About MetaFlow
             </h2>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              MetaFlow has been at the forefront of financial
-              technology innovation, transforming how businesses manage their
-              global financial operations. What started as a small startup has
-              grown into a trusted partner for enterprises worldwide.
+              MetaFlow has been at the forefront of financial technology
+              innovation, transforming how businesses manage their global
+              financial operations. What started as a small startup has grown
+              into a trusted partner for enterprises worldwide.
             </p>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
               Our mission is to democratize access to global financial services,
@@ -116,9 +92,9 @@ const About = () => {
               corporations.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Today, we process good amount of successful volume,
-              serving clients across 10+ countries with our comprehensive suite
-              of FX, remittance, and treasury management solutions.
+              Today, we process good amount of successful volume, serving
+              clients across 10+ countries with our comprehensive suite of FX,
+              remittance, and treasury management solutions.
             </p>
           </div>
 
