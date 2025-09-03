@@ -58,14 +58,14 @@ const Hero = ({ onGetStarted }: HeroProps) => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 animate-slide-up">
             <div className="card bg-white/10 backdrop-blur-sm border border-white/20 p-6 text-center">
               <div className="text-3xl font-bold text-accent-400 mb-2">
-                $50B+
+                100%
               </div>
-              <div className="text-primary-200">Annual Transaction Volume</div>
+              <div className="text-primary-200">Successful Volume</div>
             </div>
 
             <div className="card bg-white/10 backdrop-blur-sm border border-white/20 p-6 text-center">
               <div className="text-3xl font-bold text-accent-400 mb-2">
-                150+
+                10+
               </div>
               <div className="text-primary-200">Countries Supported</div>
             </div>

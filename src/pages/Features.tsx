@@ -32,7 +32,7 @@ const Features = () => {
       icon: Globe,
       title: "Global Reach",
       description:
-        "Connect with financial institutions and businesses across 150+ countries worldwide.",
+        "Connect with financial institutions and businesses across 10+ countries worldwide.",
       gradient: "from-purple-500 to-pink-500",
       delay: 0.3,
     },

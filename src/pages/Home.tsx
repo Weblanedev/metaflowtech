@@ -7,13 +7,17 @@ import {
   Globe,
   Zap,
   Users,
+  Plug,
+  Settings,
+  Play,
+  CheckCircle,
 } from "lucide-react";
 
 const Home = () => {
   const navigate = useNavigate();
   const stats = [
     { icon: TrendingUp, value: "100%", label: "Succesful Volume" },
-    { icon: Globe, value: "150+", label: "Countries" },
+    { icon: Globe, value: "10+", label: "Countries" },
     { icon: Shield, value: "99.9%", label: "Uptime" },
     { icon: Users, value: "1K+", label: "Clients" },
   ];
@@ -37,7 +41,7 @@ const Home = () => {
       icon: Globe,
       title: "Global Reach",
       description:
-        "Connect with financial institutions across 150+ countries worldwide",
+        "Connect with financial institutions across 10+ countries worldwide",
       gradient: "from-cyan-500 to-blue-500",
     },
   ];
@@ -236,14 +240,28 @@ const Home = () => {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-20 relative">
-        <div className="container mx-auto px-4">
+      <section className="py-20 relative overflow-hidden">
+        {/* Background Elements */}
+        <div className="absolute inset-0">
+          <motion.div
+            animate={{ rotate: 360 }}
+            transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 border border-blue-500/10 rounded-full"
+          />
+          <motion.div
+            animate={{ rotate: -360 }}
+            transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
+            className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-cyan-500/10 rounded-full"
+          />
+        </div>
+
+        <div className="container mx-auto px-4 relative z-10">
           <motion.div
             initial={{ y: 50, opacity: 0 }}
             whileInView={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
-            className="text-center mb-16"
+            className="text-center mb-20"
           >
             <h2 className="text-4xl md:text-6xl font-bold text-white mb-6">
               How It{" "}
@@ -257,48 +275,203 @@ const Home = () => {
             </p>
           </motion.div>
 
-          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {[
-              {
-                step: "01",
-                title: "Connect",
-                description:
-                  "Integrate with your existing systems through our secure APIs",
-              },
-              {
-                step: "02",
-                title: "Configure",
-                description:
-                  "Set up your preferences and customize your dashboard",
-              },
-              {
-                step: "03",
-                title: "Execute",
-                description:
-                  "Start trading, sending money, and managing treasury operations",
-              },
-            ].map((item, index) => (
+          {/* Steps Container */}
+          <div className="relative max-w-6xl mx-auto">
+            {/* Connecting Lines - Desktop */}
+            <div className="hidden lg:block absolute top-1/2 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500/30 via-cyan-500/50 to-blue-500/30 transform -translate-y-1/2 z-0">
               <motion.div
-                key={index}
-                initial={{ y: 50, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
+                initial={{ scaleX: 0 }}
+                whileInView={{ scaleX: 1 }}
+                transition={{ duration: 2, delay: 0.5 }}
                 viewport={{ once: true }}
-                className="text-center"
-              >
-                <div className="backdrop-blur-md bg-white/10 border border-white/20 rounded-3xl p-8 hover:bg-white/20 transition-all duration-500">
-                  <div className="w-20 h-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-bold text-white">
-                    {item.step}
+                className="h-full bg-gradient-to-r from-blue-500 to-cyan-500 origin-left"
+              />
+            </div>
+
+            {/* Steps Grid */}
+            <div className="grid lg:grid-cols-3 gap-8 lg:gap-12 relative z-10">
+              {[
+                {
+                  step: "01",
+                  title: "Connect",
+                  description:
+                    "Integrate with your existing systems through our secure APIs and start your journey",
+                  icon: Plug,
+                  gradient: "from-blue-500 to-blue-600",
+                  bgGradient: "from-blue-500/10 to-blue-600/10",
+                  delay: 0,
+                },
+                {
+                  step: "02",
+                  title: "Configure",
+                  description:
+                    "Set up your preferences, customize your dashboard, and configure your workflows",
+                  icon: Settings,
+                  gradient: "from-cyan-500 to-cyan-600",
+                  bgGradient: "from-cyan-500/10 to-cyan-600/10",
+                  delay: 0.3,
+                },
+                {
+                  step: "03",
+                  title: "Execute",
+                  description:
+                    "Start trading, sending money, and managing treasury operations with confidence",
+                  icon: Play,
+                  gradient: "from-emerald-500 to-emerald-600",
+                  bgGradient: "from-emerald-500/10 to-emerald-600/10",
+                  delay: 0.6,
+                },
+              ].map((item, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ y: 100, opacity: 0, scale: 0.8 }}
+                  whileInView={{ y: 0, opacity: 1, scale: 1 }}
+                  transition={{
+                    duration: 0.8,
+                    delay: item.delay,
+                    type: "spring",
+                    stiffness: 100,
+                  }}
+                  viewport={{ once: true }}
+                  whileHover={{
+                    y: -20,
+                    scale: 1.05,
+                    transition: { duration: 0.3 },
+                  }}
+                  className="group relative"
+                >
+                  {/* Step Card */}
+                  <div
+                    className={`backdrop-blur-md bg-gradient-to-br ${item.bgGradient} border border-white/20 rounded-3xl p-8 h-full hover:border-white/40 transition-all duration-500 relative overflow-hidden`}
+                  >
+                    {/* Animated Background */}
+                    <motion.div
+                      className={`absolute inset-0 bg-gradient-to-br ${item.gradient} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
+                      initial={{ scale: 0 }}
+                      whileHover={{ scale: 1 }}
+                      transition={{ duration: 0.5 }}
+                    />
+
+                    {/* Step Number with Icon */}
+                    <div className="relative z-10">
+                      <motion.div
+                        whileHover={{ rotate: 360 }}
+                        transition={{ duration: 0.6 }}
+                        className={`w-24 h-24 bg-gradient-to-r ${item.gradient} rounded-full flex items-center justify-center mx-auto mb-6 relative group-hover:shadow-2xl group-hover:shadow-blue-500/25 transition-all duration-500`}
+                      >
+                        {/* Pulsing Ring */}
+                        <motion.div
+                          animate={{
+                            scale: [1, 1.2, 1],
+                            opacity: [0.5, 0, 0.5],
+                          }}
+                          transition={{
+                            duration: 2,
+                            repeat: Infinity,
+                            delay: item.delay,
+                          }}
+                          className={`absolute inset-0 bg-gradient-to-r ${item.gradient} rounded-full`}
+                        />
+
+                        {/* Step Number */}
+                        <span className="text-2xl font-bold text-white relative z-10">
+                          {item.step}
+                        </span>
+
+                        {/* Icon Overlay */}
+                        <motion.div
+                          initial={{ opacity: 0, scale: 0 }}
+                          whileHover={{ opacity: 1, scale: 1 }}
+                          transition={{ duration: 0.3 }}
+                          className="absolute inset-0 flex items-center justify-center bg-white/20 rounded-full"
+                        >
+                          <item.icon className="w-8 h-8 text-white" />
+                        </motion.div>
+                      </motion.div>
+
+                      {/* Content */}
+                      <h3 className="text-2xl font-bold text-white mb-4 text-center group-hover:text-blue-100 transition-colors duration-300">
+                        {item.title}
+                      </h3>
+                      <p className="text-white/70 leading-relaxed text-center group-hover:text-white/90 transition-colors duration-300">
+                        {item.description}
+                      </p>
+
+                      {/* Success Indicator */}
+                      <motion.div
+                        initial={{ opacity: 0, scale: 0 }}
+                        whileHover={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.3, delay: 0.1 }}
+                        className="absolute top-4 right-4"
+                      >
+                        <CheckCircle className="w-6 h-6 text-green-400" />
+                      </motion.div>
+                    </div>
+
+                    {/* Floating Particles */}
+                    <motion.div
+                      animate={{
+                        y: [0, -10, 0],
+                        opacity: [0.3, 0.6, 0.3],
+                      }}
+                      transition={{
+                        duration: 3,
+                        repeat: Infinity,
+                        delay: item.delay,
+                      }}
+                      className="absolute top-2 left-2 w-2 h-2 bg-blue-400 rounded-full"
+                    />
+                    <motion.div
+                      animate={{
+                        y: [0, -15, 0],
+                        opacity: [0.2, 0.5, 0.2],
+                      }}
+                      transition={{
+                        duration: 4,
+                        repeat: Infinity,
+                        delay: item.delay + 0.5,
+                      }}
+                      className="absolute bottom-4 right-4 w-1 h-1 bg-cyan-400 rounded-full"
+                    />
                   </div>
-                  <h3 className="text-2xl font-bold text-white mb-4">
-                    {item.title}
-                  </h3>
-                  <p className="text-white/70 leading-relaxed">
-                    {item.description}
-                  </p>
-                </div>
-              </motion.div>
-            ))}
+
+                  {/* Mobile Connecting Arrow */}
+                  {index < 2 && (
+                    <div className="lg:hidden flex justify-center mt-8 mb-4">
+                      <motion.div
+                        animate={{ y: [0, 10, 0] }}
+                        transition={{ duration: 2, repeat: Infinity }}
+                        className="text-blue-400"
+                      >
+                        <ArrowRight className="w-6 h-6 rotate-90" />
+                      </motion.div>
+                    </div>
+                  )}
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Progress Indicator */}
+            <motion.div
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 1 }}
+              viewport={{ once: true }}
+              className="flex justify-center mt-12"
+            >
+              <div className="flex space-x-2">
+                {[0, 1, 2].map((dot) => (
+                  <motion.div
+                    key={dot}
+                    initial={{ scale: 0 }}
+                    whileInView={{ scale: 1 }}
+                    transition={{ duration: 0.5, delay: 1.2 + dot * 0.2 }}
+                    viewport={{ once: true }}
+                    className="w-3 h-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"
+                  />
+                ))}
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>

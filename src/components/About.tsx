@@ -1,8 +1,8 @@
 const About = () => {
   const stats = [
-    { number: "10+", label: "Years of Experience" },
-    { number: "$50B+", label: "Annual Transaction Volume" },
-    { number: "150+", label: "Countries Supported" },
+    { number: "5+", label: "Years of Experience" },
+    { number: "100%", label: "Successful Volume" },
+    { number: "10+", label: "Countries Supported" },
     { number: "1000+", label: "Enterprise Clients" },
   ];
 
@@ -103,7 +103,7 @@ const About = () => {
               About MetaFlow
             </h2>
             <p className="text-lg text-gray-600 mb-6 leading-relaxed">
-              Founded in 2014, MetaFlow has been at the forefront of financial
+              MetaFlow has been at the forefront of financial
               technology innovation, transforming how businesses manage their
               global financial operations. What started as a small startup has
               grown into a trusted partner for enterprises worldwide.
@@ -116,8 +116,8 @@ const About = () => {
               corporations.
             </p>
             <p className="text-lg text-gray-600 leading-relaxed">
-              Today, we process over $50 billion in annual transaction volume,
-              serving clients across 150+ countries with our comprehensive suite
+              Today, we process good amount of successful volume,
+              serving clients across 10+ countries with our comprehensive suite
               of FX, remittance, and treasury management solutions.
             </p>
           </div>

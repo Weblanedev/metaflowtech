@@ -42,7 +42,7 @@ const Services = () => {
       icon: Globe,
       title: "Global Reach",
       description:
-        "Connect with financial institutions and businesses across 150+ countries worldwide.",
+        "Connect with financial institutions and businesses across 10+ countries worldwide.",
       details:
         "Seamlessly integrate with local banking systems, handle 100+ currencies, and comply with international regulations. Our network spans major financial hubs and emerging markets for truly global coverage.",
       gradient: "from-purple-500 to-pink-500",
@@ -105,7 +105,7 @@ const Services = () => {
       icon: TrendingUp,
       title: "Foreign Exchange (FX)",
       description:
-        "Access competitive exchange rates across 150+ currency pairs with real-time pricing and instant execution.",
+        "Access competitive exchange rates across 10+ currency pairs with real-time pricing and instant execution.",
       features: [
         "Spot and forward contracts",
         "Real-time market rates",
@@ -124,7 +124,7 @@ const Services = () => {
         "Send money worldwide with lightning-fast transfers, competitive fees, and transparent pricing.",
       features: [
         "Instant transfers",
-        "150+ countries",
+        "10+ countries",
         "Competitive fees",
         "Real-time tracking",
         "Multiple payment methods",

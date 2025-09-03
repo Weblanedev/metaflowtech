@@ -18,7 +18,7 @@ const Services = () => {
       ),
       title: "Foreign Exchange (FX)",
       description:
-        "Access competitive exchange rates across 150+ currency pairs with real-time pricing and instant execution.",
+        "Access competitive exchange rates across 10+ currency pairs with real-time pricing and instant execution.",
       features: [
         "Spot and forward contracts",
         "Real-time market rates",
@@ -51,7 +51,7 @@ const Services = () => {
         "Send money worldwide with lightning-fast transfers, competitive fees, and transparent pricing.",
       features: [
         "Instant transfers",
-        "150+ countries",
+        "10+ countries",
         "Competitive fees",
         "Real-time tracking",
         "Multiple payment methods",

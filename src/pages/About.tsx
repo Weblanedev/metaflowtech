@@ -11,9 +11,9 @@ import {
 
 const About = () => {
   const stats = [
-    { number: "10+", label: "Years of Experience", icon: Award },
-    { number: "$1k+", label: "Annual Transaction Volume", icon: TrendingUp },
-    { number: "150+", label: "Countries Supported", icon: Globe },
+    { number: "5+", label: "Years of Experience", icon: Award },
+    { number: "100%", label: "Successful Volume", icon: TrendingUp },
+    { number: "10+", label: "Countries Supported", icon: Globe },
     { number: "1000+", label: "Enterprise Clients", icon: Users },
   ];
 
@@ -37,33 +37,6 @@ const About = () => {
       title: "Global Reach",
       description:
         "Connecting businesses worldwide with seamless cross-border financial services and local market expertise.",
-      gradient: "from-purple-500 to-pink-500",
-    },
-  ];
-
-  const team = [
-    {
-      name: "Sarah Johnson",
-      role: "Chief Executive Officer",
-      bio: "Former VP at Goldman Sachs with 15+ years in global financial markets.",
-      image:
-        "https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80",
-      gradient: "from-blue-500 to-purple-500",
-    },
-    {
-      name: "Michael Chen",
-      role: "Chief Technology Officer",
-      bio: "Ex-Google engineer with expertise in scalable financial systems and blockchain technology.",
-      image:
-        "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80",
-      gradient: "from-green-500 to-blue-500",
-    },
-    {
-      name: "Emily Rodriguez",
-      role: "Chief Financial Officer",
-      bio: "Former CFO at JP Morgan Chase with deep expertise in treasury and risk management.",
-      image:
-        "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=256&q=80",
       gradient: "from-purple-500 to-pink-500",
     },
   ];
@@ -108,7 +81,7 @@ const About = () => {
               Our Story
             </h2>
             <p className="text-lg text-white/70 mb-6 leading-relaxed">
-              Founded in 2014, MetaFlow has been at the forefront of financial
+              MetaFlow has been at the forefront of financial
               technology innovation, transforming how businesses manage their
               global financial operations. What started as a small startup has
               grown into a trusted partner for enterprises worldwide.
@@ -121,8 +94,8 @@ const About = () => {
               corporations.
             </p>
             <p className="text-lg text-white/70 leading-relaxed">
-              Today, we process over $50 billion in annual transaction volume,
-              serving clients across 150+ countries with our comprehensive suite
+              Today, we process good amount of annual transaction volume,
+              serving clients across several countries with our comprehensive suite
               of FX, remittance, and treasury management solutions.
             </p>
           </div>

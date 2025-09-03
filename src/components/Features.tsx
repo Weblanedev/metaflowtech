@@ -66,7 +66,7 @@ const Features = () => {
       ),
       title: "Global Reach",
       description:
-        "Connect with financial institutions and businesses across 150+ countries worldwide.",
+        "Connect with financial institutions and businesses across 10+ countries worldwide.",
       details:
         "Seamlessly integrate with local banking systems, handle 100+ currencies, and comply with international regulations. Our network spans major financial hubs and emerging markets for truly global coverage.",
     },

@@ -24,15 +24,6 @@ const Footer = () => {
         { label: "Press", path: "/about" },
       ],
     },
-    {
-      title: "Resources",
-      links: [
-        { label: "Documentation", path: "/services" },
-        { label: "API Reference", path: "/services" },
-        { label: "Support Center", path: "/contact" },
-        { label: "Blog", path: "/services" },
-      ],
-    },
   ];
 
   const contactInfo = [
